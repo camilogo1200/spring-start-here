@@ -1,11 +1,13 @@
 package org.camilogo1200.config;
 
-import org.camilogo1200.Parrot;
+import org.camilogo1200.main.Parrot;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.Primary;
 
 @Configuration
+@ComponentScan(basePackages = "org.camilogo1200.main")
 public class ProjectConfig {
     @Bean
     Parrot getParrot() {
